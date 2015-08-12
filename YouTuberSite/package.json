@@ -1,0 +1,13 @@
+{
+  "name": "YouTuberSite",
+  "version": "0.0.0",
+  "description": "YouTuberSite",
+  "main": "server.js",
+  "author": {
+    "name": "Tom",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
