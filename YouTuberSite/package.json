@@ -8,6 +8,8 @@
     "email": ""
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "swig": "^1.4.2"
   }
 }
