@@ -18,7 +18,8 @@ app.use(body_parser.urlencoded({
 }));
 
 app.get('/', function (req, res) {
-	res.send('A work in prgoress!');
+	//res.send('A work in prgoress!');
+	res.render('index', {});
 });
 
 var server = app.listen(3000, function () {

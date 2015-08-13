@@ -33,6 +33,7 @@
     <Compile Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="templates\index.html" />
     <Content Include="templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
