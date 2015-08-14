@@ -12,8 +12,10 @@ module.exports = function (app) {
       part: 'snippet',
       channelId: channel,
       key: 'AIzaSyCtBppALGmSX13Cn8lLSxYHs486cmSJadE',
-      maxResults: 10
+      maxResults: 10,
+      type: 'video'
     });
+    qs += (req.query.pt ? '&pageToken': '')
     console.log('/youtube/v3/search?' + qs);
     http.get({
       host: 'www.googleapis.com',

@@ -1,22 +1,42 @@
-var http = require('https');
+var http = require('http');
 var querystring = require('querystring');
 
 module.exports = function (app) {
   app.get('/', function (req, res) {
-    res.render('index', {
-      videos: [
-        {
-          name: 'video',
-          url: 'http://y2u.be/j4dMnAPZu70',
-          thumbnailUrl: 'http://i3.ytimg.com/vi/j4dMnAPZu70/default.jpg'
-        },
-        {
-          name: 'video2',
-          url: 'http://y2u.be/j4dMnAPZu70',
-          thumbnailUrl: 'http://i3.ytimg.com/vi/j4dMnAPZu70/default.jpg'
-        }
+    var videos = [];
 
-      ]
+    http.get('http://localhost:3000/api/list/UC9DiuD3z0btMOAMG_FvDRag', function (response) {
+      var body = '';
+        response.on('data', function(d) {
+          body += d;
+        });
+      response.on('end', function() {
+        data = JSON.parse(body);
+        for (var i = 0; i < data.items.length; i++) {
+          video = generate_video(data.items[i]);
+          if (video) {
+            videos.push(video);
+          }
+        }
+        res.render('index', {
+          videos: videos
+        });
+      });
+    }).on('error', function(e) {
+      console.error(e);
+      res.send(e);
     });
   });
+}
+
+function generate_video (vidJson) {
+  var video = {};
+  if (vidJson.id.kind == "youtube#video") {
+    video.name = vidJson.snippet.title;
+    video.url = 'http://y2u.be' + vidJson.id.videoId;
+    video.thumbnailUrl = vidJson.snippet.thumbnails.medium.url;
+    return video;
+  } else {
+    return false;
+  }
 }
