@@ -4,6 +4,10 @@ var swig = require('swig');
 
 var app = express();
 
+//FOR DEBUGGING
+app.set('view cache', false);
+swig.setDefaults({ cache: false });
+
 //Configure templating
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
