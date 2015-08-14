@@ -21,10 +21,10 @@ app.use(body_parser.urlencoded({
 	extended: false
 }));
 
-app.get('/', function (req, res) {
+//app.get('/', function (req, res) {
 	//res.send('A work in prgoress!');
-	res.render('index', {});
-});
+	//res.render('index', {});
+//});
 
 var server = app.listen(3000, function () {
 	var host = server.address().address;
@@ -34,3 +34,4 @@ var server = app.listen(3000, function () {
 });
 
 require('./routes/api.js')(app);
+require('./routes/pages.js')(app);

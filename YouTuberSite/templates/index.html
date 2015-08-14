@@ -22,106 +22,13 @@
 <h1>All videos</h1>
 <div id="videoList">
   <ul>
+  {% for video in videos %}
+  <a href="{{video.url}}">
     <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
+      <h3>{{video.name}}</h3>
+      <img width="100%" src="{{video.thumbnailUrl}}"></img>
     </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
-    <li>
-      <h3>Hello</h3>
-      <p>Cool video bro</p>
-      <img width="100%" src="http://img.youtube.com/vi/BPc_IK1h5C0/maxresdefault.jpg"></img>
-    </li>
+    {% endfor %}
   </ul>
 </div>
 {% endblock %}
