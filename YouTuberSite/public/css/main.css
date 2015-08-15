@@ -1,14 +1,53 @@
 /* I hate css */
-clearfix:before, .container:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
- 
-/* IE 6/7 */
-.clearfix { zoom: 1; }
+
+.titlebar {
+	position: relative;
+	width: 100%;
+	display: box;
+	color: #ccc;
+	background-color: #333;
+}
+
+.titlebar > h1 {
+	margin: 0;
+	padding: 1%;
+	color: #ccc;
+}
+
+.titlebar > .search {
+	padding: 1%;
+}
+
+.search > #search-box {
+	border: none;
+	height: 100%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	float: center;
+}
+
+* {
+	box-sizing: border-box;
+}
 
 html {
 	background-color: #EBEBEBFF;
 	font-family: Helvetica, Arial ,sans-serif;
 	color: #3F3F3F;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
 }
 
 .vid-item {

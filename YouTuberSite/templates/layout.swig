@@ -8,9 +8,15 @@
 	</head>
 
 	<body>
-		<div class="titlebar clearfix">
-			
-		</div>
+		<header>
+			<div class="titlebar">
+				<div class="right search">
+					<input type="text" id="search-box">
+					<button>SUBMIT</button>
+				</div>
+				<h1>Dan and Phil</h1>
+			</div>
+		</header>
         {% block content %}{% endblock %}
 	</body>
 </html>
