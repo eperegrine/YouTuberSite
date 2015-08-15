@@ -7,7 +7,7 @@
 
 {% block content %}
 <h1>All videos</h1>
-<div id="videoList">
+<div class="clearfix" id="videoList">
   <ul>
     {% for video in videos %}
     <a href="{{video.url}}">
@@ -18,5 +18,8 @@
     </a>
     {% endfor %}
   </ul>
+  {% if video %}
+    <button id='loadBtn' next-page="{{nextpage}}"> LOAD MORE </button>
+  {% endif %}
 </div>
 {% endblock %}

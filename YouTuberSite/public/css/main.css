@@ -7,7 +7,7 @@ clearfix:before, .container:after { content: ""; display: table; }
 
 html {
 	background-color: #EBEBEBFF;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial ,sans-serif;
 	color: #3F3F3F;
 }
 
@@ -37,4 +37,26 @@ a, a:visited, a:hover, a:active {
 h1, h2, h3, h4, h5, h6 {
 	text-decoration: bold;
 	color: #1D1D1D;
+}
+
+button {
+	border-width: 0px;
+	border-radius: 0px;
+	background-color: #4C4C4C;
+	color: #E6E6E6;
+	padding: 10px 15px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+#loadBtn {
+	font-weight: bold;
+	font-size: 1.2em;
+	width: 100%;
+	transition-duration: 0.25s;
+  	transition-timing-function: ease-out;
+}
+#loadBtn:hover {
+	background-color: #303030;
+	color: #FDFDFD;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
