@@ -5,7 +5,7 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
     var videos = [];
 
-    http.get('http://localhost:3000/api/list/UC9DiuD3z0btMOAMG_FvDRag', function (response) {
+    http.get('http://localhost:3000/api/list/UCGjylN-4QCpn8XJ1uY-UOgA', function (response) {
       var body = '';
         response.on('data', function(d) {
           body += d;
@@ -33,7 +33,7 @@ function generate_video (vidJson) {
   var video = {};
   if (vidJson.id.kind == "youtube#video") {
     video.name = vidJson.snippet.title;
-    video.url = 'http://y2u.be' + vidJson.id.videoId;
+    video.url = 'http://y2u.be/' + vidJson.id.videoId;
     video.thumbnailUrl = vidJson.snippet.thumbnails.medium.url;
     return video;
   } else {

@@ -1,4 +1,4 @@
-﻿{% extends 'layout.html' %}
+﻿{% extends 'layout.swig' %}
 
 {% block title %}Yotuber Site| Home{% endblock %}
 
