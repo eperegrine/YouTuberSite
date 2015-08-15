@@ -13,7 +13,8 @@ module.exports = function (app) {
       channelId: channel,
       key: 'AIzaSyCtBppALGmSX13Cn8lLSxYHs486cmSJadE',
       maxResults: 10,
-      type: 'video'
+      type: 'video',
+      order: 'date'
     });
     qs += (req.query.pt ? '&pageToken': '')
     console.log('/youtube/v3/search?' + qs);
