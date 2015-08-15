@@ -16,7 +16,7 @@ module.exports = function (app) {
       type: 'video',
       order: 'date'
     });
-    qs += (req.query.pt ? '&pageToken': '')
+    qs += (req.query.pt ? '&pageToken=' + req.query.pt: '')
     console.log('/youtube/v3/search?' + qs);
     http.get({
       host: 'www.googleapis.com',

@@ -19,7 +19,8 @@ module.exports = function (app) {
           }
         }
         res.render('index', {
-          videos: videos
+          videos: videos,
+          nextpage: data.nextPageToken 
         });
       });
     }).on('error', function(e) {
