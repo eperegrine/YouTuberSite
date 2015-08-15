@@ -3,6 +3,7 @@
 {% block title %}Yotuber Site| Home{% endblock %}
 
 {% block head %}
+<script type="text/javascript" src="js/load-videos.js"></script>
 {% endblock %}
 
 {% block content %}
