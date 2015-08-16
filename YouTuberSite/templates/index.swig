@@ -8,8 +8,8 @@
 
 {% block content %}
 <h1>All videos</h1>
-<div class="clearfix" id="videoList">
-  <ul>
+<div class="clearfix">
+  <ul id="videoList">
     {% for video in videos %}
     <a href="{{video.url}}">
       <li class="vid-item">
