@@ -39,7 +39,7 @@ function generate_video (vidJson) {
   var video = {};
   if (vidJson.id.kind == "youtube#video") {
     video.name = vidJson.snippet.title;
-    video.url = 'http://y2u.be/' + vidJson.id.videoId;
+    video.url = '/watch/' + vidJson.id.videoId;
     video.thumbnailUrl = vidJson.snippet.thumbnails.medium.url;
     return video;
   } else {
