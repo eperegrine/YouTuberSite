@@ -28,6 +28,11 @@ module.exports = function (app) {
       res.send(e);
     });
   });
+
+  app.get('/watch/:id', function (req, res) {
+    var id = req.params.id;
+    res.render('watch', {video: {id:id}});
+  });
 }
 
 function generate_video (vidJson) {
