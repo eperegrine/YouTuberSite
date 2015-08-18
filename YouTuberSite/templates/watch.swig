@@ -14,8 +14,15 @@
 <script type="text/javascript">
   jQuery(document).ready(function($) {
     var player = $("#player");
-    player.width(screen.width * 0.95);
+
+    player.width($(window).width() * 0.95);
     player.height(player.width() * 0.56);
+
+    $(window).resize(function(event) {
+      var player = $("#player");
+      player.width($(window).width() * 0.95);
+      player.height(player.width() * 0.56);
+    });
   });
 </script>
 {% endblock %}
