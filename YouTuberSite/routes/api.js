@@ -12,7 +12,7 @@ module.exports = function (app) {
       part: 'snippet',
       channelId: channel,
       key: 'AIzaSyCtBppALGmSX13Cn8lLSxYHs486cmSJadE',
-      maxResults: 10,
+      maxResults: 15,
       type: 'video',
       order: 'date'
     });
