@@ -7,14 +7,13 @@
 {% endblock %}
 
 {% block content %}
-<h1>All videos</h1>
 <div class="clearfix">
   <ul id="videoList">
     {% for video in videos %}
     <a href="{{video.url}}">
       <li class="vid-item">
-        <h3>{{video.name}}</h3>
         <img width="100%" src="{{video.thumbnailUrl}}"></img>
+        <h3>{{video.name}}</h3>
       </li>
     </a>
     {% endfor %}
