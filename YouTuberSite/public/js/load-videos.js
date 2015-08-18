@@ -59,8 +59,8 @@ function generate_video (vidJson) {
 }
 function generate_vid_html (video) {
 	var htmlStr = '<a href="' + 
-	video.url + '"> <li class="vid-item"> <h3>'+ 
-	video.name + '</h3> <img width="100%" src="' + 
-	video.thumbnailUrl + '"></img> </li></a>';
+	video.url + '"> <li class="vid-item">'+ '<img width="100%" src="' + 
+	video.thumbnailUrl + '"></img>'+ '<h3>'+ 
+	video.name + '</h3>'+'</li></a>';
     return htmlStr;
 }
