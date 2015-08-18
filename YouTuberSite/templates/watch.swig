@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block content %}
-<h1>All videos</h1>
 <div class="clearfix">
   <iframe id="player" height="430px" width="690px"  src="https://www.youtube.com/embed/{{video.id}}" frameborder="0" allowfullscreen></iframe>
 </div>
@@ -15,12 +14,14 @@
   jQuery(document).ready(function($) {
     var player = $("#player");
 
-    player.width($(window).width() * 0.95);
+    player.css('margin', '5%');
+
+    player.width($(window).width() * 0.9);
     player.height(player.width() * 0.56);
 
     $(window).resize(function(event) {
       var player = $("#player");
-      player.width($(window).width() * 0.95);
+      player.width($(window).width() * 0.9);
       player.height(player.width() * 0.56);
     });
   });
