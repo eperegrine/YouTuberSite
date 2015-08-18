@@ -16,6 +16,11 @@ app.set('views', __dirname + '/templates');
 //Allows static files
 app.use(express.static('public'));
 
+//Redirect static file from subdomain
+app.get('/watch/:type/:file', function (req, res) {
+	res.redirect('/' + req.params.type + '/' + req.params.file);
+})
+
 //Refactor requests
 app.use(body_parser.urlencoded({
 	extended: false
