@@ -21,6 +21,11 @@ app.get('/watch/:type/:file', function (req, res) {
 	res.redirect('/' + req.params.type + '/' + req.params.file);
 })
 
+//Set the api key
+app.locals.key = 'AIzaSyCtBppALGmSX13Cn8lLSxYHs486cmSJadE';
+//Set the chosen channel Id
+app.locals.channelId = 'UCGjylN-4QCpn8XJ1uY-UOgA';
+
 //Refactor requests
 app.use(body_parser.urlencoded({
 	extended: false

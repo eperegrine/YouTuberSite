@@ -5,7 +5,7 @@ module.exports = function (app) {
   app.get('/', function (req, res) {
     var videos = [];
 
-    http.get('http://localhost:3000/api/list/UCGjylN-4QCpn8XJ1uY-UOgA', function (response) {
+    http.get('http://localhost:3000/api/list/' + app.locals.channelId, function (response) {
       var body = '';
         response.on('data', function(d) {
           body += d;
