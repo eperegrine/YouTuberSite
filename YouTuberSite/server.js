@@ -35,3 +35,4 @@ var server = app.listen(3000, function () {
 
 require('./routes/api.js')(app);
 require('./routes/pages.js')(app);
+require('./routes/search.js')(app);
